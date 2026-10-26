@@ -31,7 +31,7 @@ load_dotenv()
 search_tool = TavilySearch(max_results=3)
 tools = [search_tool]
 
-writer_llm = ChatGroq(model="llama-3.3-70b-versatile", temperature=0.8)
+writer_llm = ChatGroq(model="qwen/qwen3.8-27b", temperature=0.8)
 writer_llm_with_tools = writer_llm.bind_tools(tools)
 
 MAX_ATTEMPTS = 3
